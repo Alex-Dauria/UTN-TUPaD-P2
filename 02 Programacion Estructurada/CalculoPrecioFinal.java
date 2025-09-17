@@ -2,8 +2,6 @@
 
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class CalculoPrecioFinal {
     static double precioBase;
 
