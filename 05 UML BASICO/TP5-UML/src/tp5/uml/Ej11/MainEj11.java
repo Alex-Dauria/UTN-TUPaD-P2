@@ -2,9 +2,9 @@ package Ej11;
 
 public class MainEj11 {
     public static void main(String[] args) {
-        Artista a = new Artista("The Band", "Rock");
-        Cancion s = new Cancion("Song 1", a);
+        Artista artista = new Artista("Shakira", "Pop");
+        Cancion cancion = new Cancion("Antología", artista);
         Reproductor r = new Reproductor();
-        r.reproducir(s);
+        r.reproducir(cancion); // Dependencia de uso
     }
 }

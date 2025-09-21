@@ -17,5 +17,11 @@ public class Cliente {
     public String getDni() { return dni; }
     public void setDni(String dni) { this.dni = dni; }
     public TarjetaDeCredito getTarjeta() { return tarjeta; }
-    public void setTarjeta(TarjetaDeCredito tarjeta) { this.tarjeta = tarjeta; }
+    
+    public void setTarjeta(TarjetaDeCredito tarjeta) {
+        this.tarjeta = tarjeta;
+        if (tarjeta != null && tarjeta.getCliente() != this) {
+            tarjeta.setCliente(this);
+        }
+    }
 }

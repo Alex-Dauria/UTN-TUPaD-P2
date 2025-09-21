@@ -4,15 +4,13 @@ package Ej10;
 public class CuentaBancaria {
     private String cbu;
     private double saldo;
-    private ClaveSeguridad claveSeguridad; // Composición
+    private ClaveSeguridad claveSeguridad;
     private Titular titular;
 
-    public CuentaBancaria(String cbu, double saldo, String codigoClave, String ultimaModClave, Titular titular) {
+    public CuentaBancaria(String cbu, double saldo, String codigoClave, String ultimaModClave) {
         this.cbu = cbu;
         this.saldo = saldo;
-        this.claveSeguridad = new ClaveSeguridad(codigoClave, ultimaModClave); // Composición
-        this.titular = titular;
-        titular.setCuenta(this); // Asociación bidireccional
+        this.claveSeguridad = new ClaveSeguridad(codigoClave, ultimaModClave);
     }
 
     // Getters y setters
@@ -22,5 +20,11 @@ public class CuentaBancaria {
     public void setSaldo(double saldo) { this.saldo = saldo; }
     public ClaveSeguridad getClaveSeguridad() { return claveSeguridad; }
     public Titular getTitular() { return titular; }
-    public void setTitular(Titular titular) { this.titular = titular; }
+    
+    public void setTitular(Titular titular) {
+        this.titular = titular;
+        if (titular != null && titular.getCuenta() != this) {
+            titular.setCuenta(this);
+        }
+    }
 }

@@ -2,9 +2,13 @@ package Ej3;
 
 public class MainEj3 {
     public static void main(String[] args) {
-        Autor autor = new Autor("Gabriel Garcia", "Argentina");
-        Editorial ed = new Editorial("Editorial Uno", "Calle Falsa 123");
-        Libro libro = new Libro("Titulo Ejemplo", "ISBN12345", autor, ed);
-        System.out.println("Libro: " + libro.getTitulo() + ", Autor: " + libro.getAutor().getNombre() + ", Editorial: " + libro.getEditorial().getNombre());
+        Autor autor = new Autor("G. G. Márquez", "Colombiana");
+        Editorial editorial = new Editorial("Sudamericana", "Calle Falsa 123");
+        Libro libro = new Libro("Cien años de soledad", "978-3-16-148410-0", editorial);
+        libro.setAutor(autor);
+
+        System.out.println("Libro: " + libro.getTitulo());
+        System.out.println("Autor: " + libro.getAutor().getNombre());
+        System.out.println("Editorial: " + libro.getEditorial().getNombre());
     }
 }

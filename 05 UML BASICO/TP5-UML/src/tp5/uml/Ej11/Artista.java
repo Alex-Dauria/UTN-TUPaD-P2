@@ -10,7 +10,9 @@ public class Artista {
         this.genero = genero;
     }
 
-    // Getters y setters
+    public Artista() {
+    }
+
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
     public String getGenero() { return genero; }

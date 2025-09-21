@@ -2,9 +2,9 @@ package Ej12;
 
 public class MainEj12 {
     public static void main(String[] args) {
-        Contribuyente c = new Contribuyente("Empresa S.A.", "20-12345678-9");
-        Impuesto i = new Impuesto(5000.0, c);
+        Contribuyente contribuyente = new Contribuyente("Carlos Peralta", "20-12345678-3");
+        Impuesto impuesto = new Impuesto(50000.0, contribuyente);
         Calculadora calc = new Calculadora();
-        calc.calcular(i);
+        calc.calcular(impuesto); // dependencia de uso
     }
 }

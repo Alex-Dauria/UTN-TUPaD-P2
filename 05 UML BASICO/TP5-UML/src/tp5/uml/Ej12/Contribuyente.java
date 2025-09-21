@@ -9,8 +9,10 @@ public class Contribuyente {
         this.nombre = nombre;
         this.cuil = cuil;
     }
+    
+    public Contribuyente() {
+    }
 
-    // Getters y setters
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
     public String getCuil() { return cuil; }

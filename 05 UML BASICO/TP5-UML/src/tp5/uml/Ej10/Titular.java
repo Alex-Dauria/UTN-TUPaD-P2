@@ -17,5 +17,11 @@ public class Titular {
     public String getDni() { return dni; }
     public void setDni(String dni) { this.dni = dni; }
     public CuentaBancaria getCuenta() { return cuenta; }
-    public void setCuenta(CuentaBancaria cuenta) { this.cuenta = cuenta; }
+    
+    public void setCuenta(CuentaBancaria cuenta) {
+        this.cuenta = cuenta;
+        if (cuenta != null && cuenta.getTitular() != this) {
+            cuenta.setTitular(this);
+        }
+    }
 }

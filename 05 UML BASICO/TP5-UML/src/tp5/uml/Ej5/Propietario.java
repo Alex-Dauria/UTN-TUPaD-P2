@@ -17,5 +17,11 @@ public class Propietario {
     public String getDni() { return dni; }
     public void setDni(String dni) { this.dni = dni; }
     public Computadora getComputadora() { return computadora; }
-    public void setComputadora(Computadora computadora) { this.computadora = computadora; }
+    
+    public void setComputadora(Computadora computadora) {
+        this.computadora = computadora;
+        if (computadora != null && computadora.getPropietario() != this) {
+            computadora.setPropietario(this);
+        }
+    }
 }

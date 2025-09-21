@@ -7,12 +7,10 @@ public class Pasaporte {
     private Foto foto; // Composición: Foto se crea dentro de Pasaporte
     private Titular titular;
 
-    public Pasaporte(String numero, String fechaEmision, String imagenFoto, String formatoFoto, Titular titular) {
+    public Pasaporte(String numero, String fechaEmision, String imagenFoto, String formatoFoto) {
         this.numero = numero;
         this.fechaEmision = fechaEmision;
-        this.foto = new Foto(imagenFoto, formatoFoto); // Composición
-        this.titular = titular;
-        titular.setPasaporte(this); // Asociación bidireccional
+        this.foto = new Foto(imagenFoto, formatoFoto);
     }
 
     // Getters y setters
@@ -22,5 +20,11 @@ public class Pasaporte {
     public void setFechaEmision(String fechaEmision) { this.fechaEmision = fechaEmision; }
     public Foto getFoto() { return foto; }
     public Titular getTitular() { return titular; }
-    public void setTitular(Titular titular) { this.titular = titular; }
+    
+    public void setTitular(Titular titular) {
+        this.titular = titular;
+        if (titular != null && titular.getPasaporte() != this) {
+            titular.setPasaporte(this);
+        }
+    }
 }

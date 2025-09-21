@@ -5,14 +5,12 @@ public class TarjetaDeCredito {
     private String numero;
     private String fechaVencimiento;
     private Cliente cliente;
-    private Banco banco; // Agregación
+    private Banco banco;
 
-    public TarjetaDeCredito(String numero, String fechaVencimiento, Cliente cliente, Banco banco) {
+    public TarjetaDeCredito(String numero, String fechaVencimiento, Banco banco) {
         this.numero = numero;
         this.fechaVencimiento = fechaVencimiento;
-        this.cliente = cliente;
         this.banco = banco;
-        cliente.setTarjeta(this); // Asociación bidireccional
     }
 
     // Getters y setters
@@ -21,7 +19,13 @@ public class TarjetaDeCredito {
     public String getFechaVencimiento() { return fechaVencimiento; }
     public void setFechaVencimiento(String fechaVencimiento) { this.fechaVencimiento = fechaVencimiento; }
     public Cliente getCliente() { return cliente; }
-    public void setCliente(Cliente cliente) { this.cliente = cliente; }
+    
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+        if (cliente != null && cliente.getTarjeta() != this) {
+            cliente.setTarjeta(this);
+        }
+    }
     public Banco getBanco() { return banco; }
     public void setBanco(Banco banco) { this.banco = banco; }
 }

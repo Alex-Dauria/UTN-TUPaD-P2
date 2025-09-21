@@ -4,17 +4,15 @@ package Ej6;
 public class Reserva {
     private String fecha;
     private String hora;
-    private Cliente cliente; // Asociación unidireccional
-    private Mesa mesa; // Agregación
+    private Cliente cliente;
+    private Mesa mesa;
 
-    public Reserva(String fecha, String hora, Cliente cliente, Mesa mesa) {
+    public Reserva(String fecha, String hora, Mesa mesa) {
         this.fecha = fecha;
         this.hora = hora;
-        this.cliente = cliente;
         this.mesa = mesa;
     }
 
-    // Getters y setters
     public String getFecha() { return fecha; }
     public void setFecha(String fecha) { this.fecha = fecha; }
     public String getHora() { return hora; }

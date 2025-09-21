@@ -2,8 +2,11 @@ package Ej8;
 
 public class MainEj8 {
     public static void main(String[] args) {
-        Usuario u = new Usuario("Paula", "paula@example.com");
-        Documento d = new Documento("Contrato", "Contenido...", "HASH123", "2025-09-17", u);
-        System.out.println("Documento: " + d.getTitulo() + ", Firmado por: " + d.getFirmaDigital().getUsuario().getNombre());
+        Usuario usuario = new Usuario("Julián Vega", "julian@mail.com");
+        Documento doc = new Documento("Contrato", "Contenido del contrato...", "abc123", "2025-08-01", usuario);
+
+        System.out.println("Documento: " + doc.getTitulo());
+        System.out.println("Usuario de la firma: " + doc.getFirma().getUsuario().getNombre());
+        System.out.println("Hash de firma: " + doc.getFirma().getCodigoHash());
     }
 }

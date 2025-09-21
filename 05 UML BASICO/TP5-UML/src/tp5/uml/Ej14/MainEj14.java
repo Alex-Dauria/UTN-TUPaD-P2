@@ -2,8 +2,8 @@ package Ej14;
 
 public class MainEj14 {
     public static void main(String[] args) {
-        Proyecto p = new Proyecto("MiProyecto", 10);
-        EditorVideo e = new EditorVideo();
-        e.exportar("MP4", p);
+        Proyecto proyecto = new Proyecto("Promo institucional", 3);
+        EditorVideo editor = new EditorVideo();
+        editor.exportar("MP4", proyecto); // dependencia de creación
     }
 }

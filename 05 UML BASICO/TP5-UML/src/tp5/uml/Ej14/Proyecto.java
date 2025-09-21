@@ -9,6 +9,9 @@ public class Proyecto {
         this.duracionMin = duracionMin;
     }
 
+    public Proyecto() {
+    }
+
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
     public int getDuracionMin() { return duracionMin; }

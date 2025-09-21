@@ -17,5 +17,11 @@ public class Titular {
     public String getDni() { return dni; }
     public void setDni(String dni) { this.dni = dni; }
     public Pasaporte getPasaporte() { return pasaporte; }
-    public void setPasaporte(Pasaporte pasaporte) { this.pasaporte = pasaporte; }
+    
+    public void setPasaporte(Pasaporte pasaporte) {
+        this.pasaporte = pasaporte;
+        if (pasaporte != null && pasaporte.getTitular() != this) {
+            pasaporte.setTitular(this);
+        }
+    }
 }

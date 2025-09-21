@@ -2,9 +2,11 @@ package Ej2;
 
 public class MainEj2 {
     public static void main(String[] args) {
-        Bateria b = new Bateria("BT-100", 4000);
-        Usuario u = new Usuario("Ana Gomez", "87654321");
-        Celular c = new Celular("IMEI123", "MarcaX", "ModeloY", b, u);
-        System.out.println("Celular: " + c.getMarca() + " " + c.getModelo() + ", Usuario: " + c.getUsuario().getNombre() + ", Bateria: " + c.getBateria().getModelo());
+        Usuario usuario = new Usuario("Ana Gómez", "87654321");
+        Bateria bateria = new Bateria("BTX-5000", 4000);
+        Celular celular = new Celular("Samsung", "A52", "123456789012345", bateria);
+        usuario.setCelular(celular);
+        System.out.println("Usuario: " + celular.getUsuario().getNombre());
+        System.out.println("Batería: " + celular.getBateria().getModelo());
     }
 }

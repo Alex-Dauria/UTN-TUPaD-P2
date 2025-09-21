@@ -4,14 +4,12 @@ package Ej9;
 public class CitaMedica {
     private String fecha;
     private String hora;
-    private Paciente paciente; // Asociación unidireccional
-    private Profesional profesional; // Asociación unidireccional
+    private Paciente paciente;
+    private Profesional profesional;
 
-    public CitaMedica(String fecha, String hora, Paciente paciente, Profesional profesional) {
+    public CitaMedica(String fecha, String hora) {
         this.fecha = fecha;
         this.hora = hora;
-        this.paciente = paciente;
-        this.profesional = profesional;
     }
 
     // Getters y setters

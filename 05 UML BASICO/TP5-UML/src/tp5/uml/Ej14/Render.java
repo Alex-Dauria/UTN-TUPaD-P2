@@ -9,6 +9,9 @@ public class Render {
         this.proyecto = proyecto;
     }
 
+    public Render() {
+    }
+
     public String getFormato() { return formato; }
     public void setFormato(String formato) { this.formato = formato; }
     public Proyecto getProyecto() { return proyecto; }

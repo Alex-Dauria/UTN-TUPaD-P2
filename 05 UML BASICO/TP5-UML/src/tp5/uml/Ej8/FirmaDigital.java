@@ -4,7 +4,7 @@ package Ej8;
 public class FirmaDigital {
     private String codigoHash;
     private String fecha;
-    private Usuario usuario; // Agregación
+    private Usuario usuario;
 
     public FirmaDigital(String codigoHash, String fecha, Usuario usuario) {
         this.codigoHash = codigoHash;
@@ -12,7 +12,6 @@ public class FirmaDigital {
         this.usuario = usuario;
     }
 
-    // Getters y setters
     public String getCodigoHash() { return codigoHash; }
     public void setCodigoHash(String codigoHash) { this.codigoHash = codigoHash; }
     public String getFecha() { return fecha; }
