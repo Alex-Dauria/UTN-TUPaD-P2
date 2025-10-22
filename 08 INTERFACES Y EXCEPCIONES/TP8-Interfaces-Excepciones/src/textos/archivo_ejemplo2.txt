@@ -1,0 +1,4 @@
+Este es un archivo de ejemplo
+para probar la lectura de archivos en el ejercicio de excepciones.
+Linea 3 del archivo.
+Linea 4 del archivo.
