@@ -24,6 +24,6 @@ public class TarjetaCredito implements PagoConDescuento {
         double montoConDescuento = monto - descuento;
         System.out.println("Descuento aplicado: $" + descuento);
         System.out.println("Monto con descuento: $" + montoConDescuento);
-        return montoConDescuento;  // ✅ CORREGIDO: retorna el monto con descuento
+        return montoConDescuento;
     }
 }
